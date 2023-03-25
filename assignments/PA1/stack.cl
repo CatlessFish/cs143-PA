@@ -134,7 +134,7 @@ class Main inherits IO {
                   out_string(">");
                   let s : String <- in_string() in
                   {
-                     out_string(s).out_string("\n");
+                     -- out_string(s).out_string("\n");
                      if s = "e" then
                         stack.evaluate()
                      else if s = "d" then
