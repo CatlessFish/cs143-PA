@@ -1,0 +1,24 @@
+#name "test_2_error_handling.cl"
+#4 IF
+#4 '('
+#4 INT_CONST 2
+#4 ERROR ">"
+#4 INT_CONST 1
+#4 ')'
+#7 OBJECTID a
+#7 ASSIGN
+#7 OBJECTID b
+#7 ERROR "?"
+#7 OBJECTID c
+#7 ':'
+#7 OBJECTID d
+#10 OBJECTID a
+#10 ASSIGN
+#10 ERROR "!"
+#10 OBJECTID b
+#13 OBJECTID a
+#13 ASSIGN
+#14 ERROR "Unterminated string constant"
+#15 ERROR "Unterminated string constant"
+#19 ERROR "Unmatched *)"
+#24 ERROR "EOF in comment"

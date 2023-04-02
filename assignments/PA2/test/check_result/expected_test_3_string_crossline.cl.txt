@@ -1,0 +1,9 @@
+#name "test_3_string_crossline.cl"
+#5 STR_CONST "hello\nworld"
+#8 STR_CONST "hello\n\t  world  world"
+#12 ERROR "Unterminated string constant"
+#12 OBJECTID world
+#13 ERROR "Unterminated string constant"
+#15 ERROR "Unterminated string constant"
+#15 OBJECTID world
+#16 ERROR "Unterminated string constant"

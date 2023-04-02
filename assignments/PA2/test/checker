@@ -1,0 +1,16 @@
+#!/bin/bash
+if [ -e ./check_result ]; then 
+    rm -rf check_result
+fi
+mkdir check_result
+for t in test*.cl; do
+  ../lexer $t > check_result/mine_$t.txt
+  lexer $t > check_result/expected_$t.txt
+  result=$(diff check_result/mine_$t.txt check_result/expected_$t.txt)
+
+  if [ -z "$result" ]; then 
+    echo "$t passed"
+  else 
+    echo "$t\n $result"
+  fi
+done
