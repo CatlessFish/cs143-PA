@@ -219,7 +219,7 @@ WHITESPACE      [ \f\r\t\v]+
   }
 }
 
- /* Normal character but '\', '\n', null('\0') or '"' */
+ /* Normal character except '\', '\n', null('\0') or '"' */
 <STRING>[^\\\n\0\"]       {
   if (string_buf_ptr - string_buf >= MAX_STR_CONST - 1) {
     string_too_long = 1;
